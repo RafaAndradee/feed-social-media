@@ -25,19 +25,42 @@ const searchStates = searchText => {
  outputHtml(matches);
 };
 
+
+function clickListener(e){
+    var el = document.querySelector('h4')
+    el.value
+
+}
+
 // VER RESULTADOS
 const outputHtml = matches => {
+
+
+
  if (matches.length > 0) {
   const html = matches
    .map(
-    match => `<div class="card card-body mb-1">
-    <h4>${match.CIDADE} (${match.IATA})
+    match => `<div class="card card-body mb-1 listActive">
+    <h4 onclick="clickListener(this)">(${match.IATA}) ${match.CIDADE} </h4>
    </div>`
    )
    .join('');
+
   matchList.innerHTML = html;
+
+
+
  }
+
+
+
+
+
 };
+
+
+
+
 
 window.addEventListener('DOMContentLoaded', pegarOrigens);
 search.addEventListener('input', () => searchStates(search.value));
