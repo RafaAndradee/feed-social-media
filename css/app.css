@@ -1,0 +1,93 @@
+/* Enter Your Custom CSS Here */
+
+.icon_box .icon_wrapper, .icon_box a .icon_wrapper, .style-simple .icon_box:hover .icon_wrapper {
+    color: #3B0000;
+}
+
+.pricing-box-box.pricing-box-featured {
+    background: #fff;
+}
+
+.pricing-box-box.pricing-box-featured, .pricing-box-box.pricing-box-featured .plan-header h2, .pricing-box-box.pricing-box-featured .plan-header .price sup.currency, .pricing-box-box.pricing-box-featured .plan-header .price > span, .pricing-box-box.pricing-box-featured .plan-header .price sup.period, .pricing-box-box.pricing-box-featured .plan-header p.subtitle, .pricing-box-box.pricing-box-featured .plan-inside ul {
+    color: #000000;
+}
+
+.chart_box .chart .num, .counter .desc_wrapper .number-wrapper, .how_it_works .image .number, .pricing-box .plan-header .price, .quick_fact .number-wrapper, .woocommerce .product div.entry-summary .price {
+    font-family: "Titillium Web", Arial, Tahoma, sans-serif;
+		color: #AB373C;
+    font-weight: 700;
+    }
+
+.pricing-box .plan-header {
+    text-align: left;
+    padding: 20px 15px 0;
+}
+
+.content-form {
+		margin:-30px -15px;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;
+}
+
+.box {
+    display: inline-block;
+    padding: 0px 5px;
+    margin-left: -4px;
+    vertical-align: top;
+}
+
+.box100 {width: 100%;}
+
+.box50 {width: 47.5%;}
+
+.box33 {width: 31%;}
+
+.small-title {display: block; font-size: 12px; color: #777; text-transform: uppercase; margin-bottom: 5px;}
+
+.content-form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.content-form input[type=radio] {
+    width: initial;
+    margin-right: 5px;
+		margin-bottom:15px;
+}
+
+.content-form button {
+    width: 100%;
+    -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;
+}
+
+.nav-form {margin-bottom: 5px;}
+
+.nav-form ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.nav-form ul li:first-child{
+		margin-left: -20px;
+}
+
+.nav-form ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #777;
+		-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;
+}
+
+.tabs {display: none;}
+#tab1 {display: block;}
+
+.nav-form ul li a:hover {background-color: #f5f5f5; text-decoration: none;}
+.nav-form ul .current a {background-color: royalblue; color: #fff;}
+.nav-form ul .current a:hover {background-color: royalblue; color: #fff; text-decoration: none;}
