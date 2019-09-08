@@ -30,6 +30,7 @@ const searchStates = searchText => {
 
 //criar uma array com os titulos de cada objeto da lista
 //criar uma função que marque o texto com uma id
+//criar um map que passei pelos objetos até chegar a li que contem a id Active
 
 
 //titleOrigens.map(function(index));
@@ -38,8 +39,12 @@ function clickListener(){
 
   const addActive = document.getElementById('listOrigin').id = 'listActive'
   const listActive = document.getElementById('listActive')
-
   const titleOrigens = document.getElementsByClassName('titleOrigens');
+
+  if (document.getElementById('listActive')) {
+    console.log(document.getElementById('listActive').textContent);
+  }
+
 
 
 }
@@ -61,9 +66,9 @@ const outputHtml = matches => {
  if (matches.length > 0) {
   const html = matches
    .map(
-    match => `<div class="card card-body mb-1 listOrigin">
-    <h4 id="listOrigin" class="titleOrigens" onclick="clickListener()">(${match.IATA}) ${match.CIDADE} </h4>
-   </div>`
+    match => `<ul class="card card-body mb-1 listOrigin">
+    <li><h4 id="listOrigin" class="titleOrigens" onclick="clickListener(this)">(${match.IATA}) ${match.CIDADE} </li>
+   </ul>`
    )
    .join('');
 
