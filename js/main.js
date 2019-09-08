@@ -26,11 +26,32 @@ const searchStates = searchText => {
 };
 
 
-function clickListener(e){
-    var el = document.querySelector('h4')
-    el.value
+
+
+//criar uma array com os titulos de cada objeto da lista
+//criar uma função que marque o texto com uma id
+
+
+//titleOrigens.map(function(index));
+
+function clickListener(){
+
+  const addActive = document.getElementById('listOrigin').id = 'listActive'
+  const listActive = document.getElementById('listActive')
+
+  const titleOrigens = document.getElementsByClassName('titleOrigens');
+
 
 }
+
+
+/*
+function clickListener(e){
+    var el = document.querySelector('h4')
+    e = el.textContent
+}
+*/
+
 
 // VER RESULTADOS
 const outputHtml = matches => {
@@ -40,8 +61,8 @@ const outputHtml = matches => {
  if (matches.length > 0) {
   const html = matches
    .map(
-    match => `<div class="card card-body mb-1 listActive">
-    <h4 onclick="clickListener(this)">(${match.IATA}) ${match.CIDADE} </h4>
+    match => `<div class="card card-body mb-1 listOrigin">
+    <h4 id="listOrigin" class="titleOrigens" onclick="clickListener()">(${match.IATA}) ${match.CIDADE} </h4>
    </div>`
    )
    .join('');
