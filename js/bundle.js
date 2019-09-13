@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 var xhr = new XMLHttpRequest();
 
@@ -12,49 +14,43 @@ xhr.onreadystatechange = function(){
   }
 }
 */
-
 //"resolve" caso a requisição tenha dado certo
 //"reject" caso a  tenha dado erro
+var xhr = new XMLHttpRequest();
 
-
-var xhr = new XMLHttpRequest()
-
-xhr.onload = function(){
+xhr.onload = function () {
   if (xhr.status === 200) {
-    var responseObject = JSON.parse(xhr.responseText)
-
-    let newContent = responseObject
+    var responseObject = JSON.parse(xhr.responseText);
+    var newContent = responseObject;
     /*
     let newArr = newContent.map(function(item, teste){
       return item.lenght
     })
     */
+
     /*
     let newArr = newContent.reduce(function(total,next){
       return console.log(responseObject)
     })
     */
 
-
-    const newArr = newContent.filter(function(item){
+    var newArr = newContent.filter(function (item) {
       return item.IATA == "BEL";
-    })
+    });
     console.log(newArr.CIDADE);
-
     /*
     let newArr = newContent.find(function(item){
       return newContent.IATA === '^';
-
-    })
+     })
     */
-console.log(newArr);
-      document.getElementById('texto').innerHTML = newArr.IATA;
+
+    console.log(newArr);
+    document.getElementById('texto').innerHTML = newArr.IATA;
   }
-}
+};
 
 xhr.open('GET', 'data/airport.json', true);
 xhr.send(null);
-
 /*
 var minhaPromise = function() {
   return new Promise(function(resolve, reject){ // criar promise (classe)
